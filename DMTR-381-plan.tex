@@ -959,11 +959,265 @@ Step 12  \\ \hline
 \end{tabular}
  Description \\
 {\footnotesize
+For one of the selected images, verify, by using the select-extension
+controls, that the mask and variance planes of the image can be
+displayed.\\
+\includegraphics[width=3.12500in]{jira_imgs/3107.png}\\
+Use the ``image layers'' toolbar button\\
+\includegraphics[width=0.45833in]{jira_imgs/3108.png}to bring up the
+layers dialog, and enable the overlay of mask data:\\
+\includegraphics[width=3.12500in]{jira_imgs/3109.png}\\
+Use the resulting dialog to request the overlay of one or more
+individual mask planes.\\[2\baselineskip]Note that the mask plane colors
+and transparency may be edited, and that the mask layer dialog also
+highlights the mask status of the pixel currently at the mouse position.
+
+}
+\hdashrule[0.5ex]{\textwidth}{1pt}{3mm}
+  Expected Result \\
+{\footnotesize
+
+}
+
+\begin{tabular}{p{2cm}}
+\toprule
+Step 13  \\ \hline
+\end{tabular}
+ Description \\
+{\footnotesize
 Dismiss the results of the previous search, by clicking on the ``x'' in
 the ``tab'' atop the results table.\\
 {{\\
 \includegraphics[width=1.56250in]{jira_imgs/3106.png}{Image Search
 Results Table}}}
+
+}
+\hdashrule[0.5ex]{\textwidth}{1pt}{3mm}
+  Expected Result \\
+{\footnotesize
+
+}
+
+\begin{tabular}{p{2cm}}
+\toprule
+Step 14  \\ \hline
+\end{tabular}
+ Description \\
+{\footnotesize
+If a calibration level is specified for this test, here: {(none)}⁠\\
+ensure that the ``Observation Type and Source'' checkbox is selected,
+and then check off the specified calibration level. ~Otherwise, ensure
+that no calibration level is checked.
+
+}
+\hdashrule[0.5ex]{\textwidth}{1pt}{3mm}
+  Expected Result \\
+{\footnotesize
+
+}
+
+\begin{tabular}{p{2cm}}
+\toprule
+Step 15  \\ \hline
+\end{tabular}
+ Description \\
+{\footnotesize
+Starting from the ObsTAP search screen, ensure that ``Location'' search
+is unselected (using the checkbox). ~Ensure that ``Timing'' searches are
+selected and that the disclosure triangle for their search specification
+is opened (i.e., pointing down).\\[2\baselineskip]The specified time or
+time range for this search is: {2024-10-01 00:00Z through 2024-11-01
+00:00Z}⁠\\[2\baselineskip]Depending on the above value, select the
+appropriate ``Time of Observation'' menu item: ``Completed in the last
+\ldots{}'' for a relative time-since specification, or ``Overlapping
+specified range'' for an absolute-time range. For the latter, select
+``UTC date/times (ISO format)'' or ``MJD'' as appropriate to the way the
+specification appears above. Type \textless{}TAB\textgreater{} or
+otherwise leave the entry field.
+
+}
+\hdashrule[0.5ex]{\textwidth}{1pt}{3mm}
+  Expected Result \\
+{\footnotesize
+The data entry fields in the ``Timing'' section of the screen should not
+show any error (i.e., should not be highlighted in red).
+
+}
+
+\begin{tabular}{p{2cm}}
+\toprule
+Step 16  \\ \hline
+\end{tabular}
+ Description \\
+{\footnotesize
+Limit the search to a specific detector: in the right-hand side of the
+ObsTAP interface, enter the text below in order to do this. ~Then
+execute the search. ~(NB: detector 94 happens to be the central CCD in
+the array.)
+
+}
+\hdashrule[0.5ex]{\textwidth}{1pt}{3mm}
+  Test Data \\
+ {\footnotesize
+=94
+
+}
+\hdashrule[0.5ex]{\textwidth}{1pt}{3mm}
+  Expected Result \\
+{\footnotesize
+The result should be a table of observations for the specified date
+range and the specified detector. ~Because no calibration level
+restriction was applied, the search result should include multiple image
+types.
+
+}
+
+\begin{tabular}{p{2cm}}
+\toprule
+Step 17  \\ \hline
+\end{tabular}
+ Description \\
+{\footnotesize
+Verify by inspecting the dataproduct\_subtype column of the search
+result that raw (lsst.raw), PVI (lsst.calexp), and difference images
+(lsst.goodSeeingDiff\_differenceExp) are available. ~Verify by clicking
+on rows of each type that each type of image can be displayed. ~Note in
+particular that raw images have a different format (16 single-amplifier
+images).
+
+}
+\hdashrule[0.5ex]{\textwidth}{1pt}{3mm}
+  Expected Result \\
+{\footnotesize
+
+}
+
+\begin{tabular}{p{2cm}}
+\toprule
+Step 18  \\ \hline
+\end{tabular}
+ Description \\
+{\footnotesize
+Dismiss the results of the previous search, by clicking on the ``x'' in
+the ``tab'' atop the results table.\\
+{{\\
+\includegraphics[width=1.56250in]{jira_imgs/3106.png}{Image Search
+Results Table}}}
+
+}
+\hdashrule[0.5ex]{\textwidth}{1pt}{3mm}
+  Expected Result \\
+{\footnotesize
+
+}
+
+\begin{tabular}{p{2cm}}
+\toprule
+Step 19  \\ \hline
+\end{tabular}
+ Description \\
+{\footnotesize
+If a calibration level is specified for this test, here: {2}⁠~\\
+ensure that the ``Observation Type and Source'' checkbox is selected,
+and then check off the specified calibration level. Otherwise, ensure
+that no calibration level is checked.
+
+}
+\hdashrule[0.5ex]{\textwidth}{1pt}{3mm}
+  Expected Result \\
+{\footnotesize
+
+}
+
+\begin{tabular}{p{2cm}}
+\toprule
+Step 20  \\ \hline
+\end{tabular}
+ Description \\
+{\footnotesize
+Ensure that the ``Location'' and ``Timing'' selectors on the ObsTAP
+screen are unchecked. ~(These will be implicit in the Visit ID.)
+
+}
+\hdashrule[0.5ex]{\textwidth}{1pt}{3mm}
+  Expected Result \\
+{\footnotesize
+
+}
+
+\begin{tabular}{p{2cm}}
+\toprule
+Step 21  \\ \hline
+\end{tabular}
+ Description \\
+{\footnotesize
+Enter the Visit ID, {538450}⁠ , as a constraint on the ``lsst\_visit''
+field in the constraints table on the right side of the UI, as "=
+{538450}⁠ ".
+
+}
+\hdashrule[0.5ex]{\textwidth}{1pt}{3mm}
+  Expected Result \\
+{\footnotesize
+
+}
+
+\begin{tabular}{p{2cm}}
+\toprule
+Step 22  \\ \hline
+\end{tabular}
+ Description \\
+{\footnotesize
+Execute the search.
+
+}
+\hdashrule[0.5ex]{\textwidth}{1pt}{3mm}
+  Expected Result \\
+{\footnotesize
+The usual Portal ``tri-view'' should appear, with a table of all the
+CCD-level images in the selected visit in the bottom half of the
+display, coverage map and single-image-display tabs in the upper left,
+and an X-Y plot in the upper right.
+
+}
+
+\begin{tabular}{p{2cm}}
+\toprule
+Step 23  \\ \hline
+\end{tabular}
+ Description \\
+{\footnotesize
+Verify that the coverage image displays the expected pattern of CCDs in
+the focal plane for a single visit, projected on the sky.
+
+}
+\hdashrule[0.5ex]{\textwidth}{1pt}{3mm}
+  Expected Result \\
+{\footnotesize
+
+}
+
+\begin{tabular}{p{2cm}}
+\toprule
+Step 24  \\ \hline
+\end{tabular}
+ Description \\
+{\footnotesize
+Verify that the correct visit was returned.
+
+}
+\hdashrule[0.5ex]{\textwidth}{1pt}{3mm}
+  Expected Result \\
+{\footnotesize
+
+}
+
+\begin{tabular}{p{2cm}}
+\toprule
+Step 25  \\ \hline
+\end{tabular}
+ Description \\
+{\footnotesize
 
 }
 \hdashrule[0.5ex]{\textwidth}{1pt}{3mm}
