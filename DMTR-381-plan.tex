@@ -98,7 +98,7 @@ Section \ref{sect:overview} provides a summary of the test results, including an
 an overall assessment statement and suggestions for possible improvements.
 Section \ref{sect:detailedtestresults} provides detailed results for each step in each test case.
 
-The current status of test plan \href{https://jira.lsstcorp.org/secure/Tests.jspa\#/testPlan/LVV-P80}{LVV-P80} in Jira is \textbf{ Draft }.
+The current status of test plan \href{https://jira.lsstcorp.org/secure/Tests.jspa\#/testPlan/LVV-P80}{LVV-P80} in Jira is \textbf{ Approved }.
 
 \subsection{References}
 \label{sect:references}
@@ -166,16 +166,16 @@ Gregory Dubois-Felsmann }
 \medskip
 \end{minipage}
 \\ \hline
-\href{https://jira.lsstcorp.org/secure/Tests.jspa#/testCase/LVV-T2716}{LVV-T2716}
-& {\small Gregory Dubois-Felsmann } & {\small  } &
+\href{https://jira.lsstcorp.org/secure/Tests.jspa#/testCase/LVV-T707}{LVV-T707}
+& {\small Jeffrey Carlin } & {\small  } &
 \begin{minipage}[]{6cm}
 \smallskip
 {\small  }
 \medskip
 \end{minipage}
 \\ \hline
-\href{https://jira.lsstcorp.org/secure/Tests.jspa#/testCase/LVV-T707}{LVV-T707}
-& {\small Jeffrey Carlin } & {\small  } &
+\href{https://jira.lsstcorp.org/secure/Tests.jspa#/testCase/LVV-T2716}{LVV-T2716}
+& {\small Gregory Dubois-Felsmann } & {\small  } &
 \begin{minipage}[]{6cm}
 \smallskip
 {\small  }
@@ -197,7 +197,7 @@ Gregory Dubois-Felsmann }
 \begin{longtable}{p{2cm}cp{2.3cm}p{8.6cm}p{2.3cm}}
 \toprule
 \multicolumn{2}{r}{ T. Plan \href{https://jira.lsstcorp.org/secure/Tests.jspa\#/testPlan/LVV-P80}{LVV-P80}:} &
-\multicolumn{2}{p{10.9cm}}{\textbf{ LDM-503-RSPa: RSP on the Interim Data Facility (IDF) is ready for DP0.2 }} & Draft \\\hline
+\multicolumn{2}{p{10.9cm}}{\textbf{ LDM-503-RSPa: RSP on the Interim Data Facility (IDF) is ready for DP0.2 }} & Approved \\\hline
 \multicolumn{2}{r}{ T. Cycle \href{https://jira.lsstcorp.org/secure/Tests.jspa\#/testCycle/LVV-C167}{LVV-C167}:} &
 \multicolumn{2}{p{10.9cm}}{\textbf{ LDM-503-RSPa: Test RSP capabilities on IDF for DP0.2 readiness }} & Not Executed \\\hline
 \textbf{Test Cases} &  \textbf{Ver.}  \\\toprule
@@ -207,10 +207,10 @@ Gregory Dubois-Felsmann }
 \href{https://jira.lsstcorp.org/secure/Tests.jspa#/testCase/LVV-T2721}{LVV-T2721}
 &  1
 \\
-\href{https://jira.lsstcorp.org/secure/Tests.jspa#/testCase/LVV-T2716}{LVV-T2716}
+\href{https://jira.lsstcorp.org/secure/Tests.jspa#/testCase/LVV-T707}{LVV-T707}
 &  1
 \\
-\href{https://jira.lsstcorp.org/secure/Tests.jspa#/testCase/LVV-T707}{LVV-T707}
+\href{https://jira.lsstcorp.org/secure/Tests.jspa#/testCase/LVV-T2716}{LVV-T2716}
 &  1
 \\
 \\\hline
@@ -1235,10 +1235,11 @@ Step 6  \\ \hline
 \end{tabular}
  Description \\
 {\footnotesize
-If a calibration level is specified for this test, here: {3}⁠\\
+If a calibration level (or levels) is/are specified for this test, here:
+{3}⁠\\
 ensure that the ``Observation Type and Source'' checkbox is selected,
-and then check off the specified calibration level. ~Otherwise, ensure
-that no calibration level is checked.
+and then check off the specified calibration level(s). ~Otherwise,
+ensure that no calibration level is checked.
 
 }
 \hdashrule[0.5ex]{\textwidth}{1pt}{3mm}
@@ -1421,6 +1422,327 @@ the ``tab'' atop the results table.\\
 {{\\
 \includegraphics[width=1.56250in]{jira_imgs/3106.png}{Image Search
 Results Table}}}
+
+}
+\hdashrule[0.5ex]{\textwidth}{1pt}{3mm}
+  Expected Result \\
+{\footnotesize
+
+}
+
+\paragraph{ LVV-T707 - Verify multi-image scaling and alignment }\mbox{}\\
+
+Version \textbf{1}.
+Open  \href{https://jira.lsstcorp.org/secure/Tests.jspa#/testCase/LVV-T707}{\textit{ LVV-T707 } }
+test case in Jira.
+
+Verify that the Portal has the capability to display multiple images on
+a common astrophysical coordinate scale, aligned on the screen in a
+common orientation.
+
+\textbf{ Preconditions}:\\
+
+
+Final comment:\\
+
+
+Detailed steps :
+
+\begin{tabular}{p{2cm}}
+\toprule
+Step 1  \\ \hline
+\end{tabular}
+ Description \\
+{\footnotesize
+Navigate to the Portal Aspect endpoint. ~The stable version of the RSP
+at the interim data facility (IDF) should be used for this test and is
+currently located at: \url{https://data.lsst.cloud/}. The Portal Aspect
+can be reached by clicking on ``Portal'' in the RSP home page or by
+navigating directly to~\url{https://data.lsst.cloud/portal/app}.
+
+}
+\hdashrule[0.5ex]{\textwidth}{1pt}{3mm}
+  Expected Result \\
+{\footnotesize
+A credential-entry screen should be displayed.
+
+}
+
+\begin{tabular}{p{2cm}}
+\toprule
+Step 2  \\ \hline
+\end{tabular}
+ Description \\
+{\footnotesize
+Enter a valid set of credentials for an LSST user with RSP access on the
+instance under test.
+
+}
+\hdashrule[0.5ex]{\textwidth}{1pt}{3mm}
+  Expected Result \\
+{\footnotesize
+The Portal Aspect UI should be displayed following authentication.
+
+}
+
+\begin{tabular}{p{2cm}}
+\toprule
+Step 3  \\ \hline
+\end{tabular}
+ Description \\
+{\footnotesize
+If a calibration level (or levels) is/are specified for this test, here:
+{2, 3⁠}⁠\\
+ensure that the ``Observation Type and Source'' checkbox is selected,
+and then check off the specified calibration level(s). ~Otherwise,
+ensure that no calibration level is checked.
+
+}
+\hdashrule[0.5ex]{\textwidth}{1pt}{3mm}
+  Expected Result \\
+{\footnotesize
+
+}
+
+\begin{tabular}{p{2cm}}
+\toprule
+Step 4  \\ \hline
+\end{tabular}
+ Description \\
+{\footnotesize
+Starting from the ObsTAP search screen, ensure that ``Location'' search
+is selected (using the checkbox), and that the disclosure triangle for
+its search specification is opened (i.e., pointing down).\\
+Ensure that the query type ``Observation boundary contains point'' is
+selected. Enter the target coordinates {60.361, -34.980⁠}⁠ in the
+``Coordinates or object name'' field. Type \textless{}TAB\textgreater{}
+or otherwise leave the entry field.
+
+}
+\hdashrule[0.5ex]{\textwidth}{1pt}{3mm}
+  Expected Result \\
+{\footnotesize
+The ``Coordinates of object name'' field should not show an error (i.e.,
+should not be highlighted in red).
+
+}
+
+\begin{tabular}{p{2cm}}
+\toprule
+Step 5  \\ \hline
+\end{tabular}
+ Description \\
+{\footnotesize
+Use the ``Spectral Coverage'' section of the ``3. Enter Constraints''
+field on the left to restrict coverage to images covering {600
+nanometers}⁠ .\\[2\baselineskip](This selects the r-band. Symbolic
+selection of this will be available in a subsequent release of the
+Portal Aspect.)
+
+}
+\hdashrule[0.5ex]{\textwidth}{1pt}{3mm}
+  Expected Result \\
+{\footnotesize
+
+}
+
+\begin{tabular}{p{2cm}}
+\toprule
+Step 6  \\ \hline
+\end{tabular}
+ Description \\
+{\footnotesize
+Execute the search. ~The usual ``tri-view'' should appear. ~Use the
+``img-tbl'' button on the upper right to change to a mode without the
+x-y plot viewer, which is not particularly useful for this test.\\
+\includegraphics[width=3.12500in]{jira_imgs/3174.png}
+
+}
+\hdashrule[0.5ex]{\textwidth}{1pt}{3mm}
+  Expected Result \\
+{\footnotesize
+The image table should appear on the right, with the image (``Data
+Product'') viewer and the coverage image in tabs on the left. ~Only
+r-band images should be shown.
+
+}
+
+\begin{tabular}{p{2cm}}
+\toprule
+Step 7  \\ \hline
+\end{tabular}
+ Description \\
+{\footnotesize
+Select the coverage image tab.
+
+}
+\hdashrule[0.5ex]{\textwidth}{1pt}{3mm}
+  Expected Result \\
+{\footnotesize
+The coverage tab should display the frames of all the images returned
+from the search.
+
+}
+
+\begin{tabular}{p{2cm}}
+\toprule
+Step 8  \\ \hline
+\end{tabular}
+ Description \\
+{\footnotesize
+Use the layers dialog, from the ``Manipulate overlay display'' button in
+the image toolbar:\\
+\includegraphics[width=0.37500in]{jira_imgs/3175.png}to change the
+display of image frames from ``all'' to ``selected''. (This shows only
+the frames of images that are selected using the checkbox in their table
+row.)\\
+\includegraphics[width=3.12500in]{jira_imgs/3176.png}
+
+}
+\hdashrule[0.5ex]{\textwidth}{1pt}{3mm}
+  Expected Result \\
+{\footnotesize
+
+}
+
+\begin{tabular}{p{2cm}}
+\toprule
+Step 9  \\ \hline
+\end{tabular}
+ Description \\
+{\footnotesize
+Click on the header of the ``t\_min'' column to sort the data in
+increasing order of time.
+
+}
+\hdashrule[0.5ex]{\textwidth}{1pt}{3mm}
+  Expected Result \\
+{\footnotesize
+Two coadded images, one ``deep'' (dataproduct\_subtype =
+lsst.deepCoadd\_calexp) and one ``good seeing'' (lsst.goodSeeingCoadd),
+of the same sky tile, should appear at the top of the list (NB: coadded
+images do not have times assigned in the DP0.2 dataset; this will be
+changed in later data releases).
+
+}
+
+\begin{tabular}{p{2cm}}
+\toprule
+Step 10  \\ \hline
+\end{tabular}
+ Description \\
+{\footnotesize
+Use the checkboxes to select the two coadded images at the top of the
+list.\\
+\includegraphics[width=3.12500in]{jira_imgs/3177.png}
+
+}
+\hdashrule[0.5ex]{\textwidth}{1pt}{3mm}
+  Expected Result \\
+{\footnotesize
+Their (identical) frames should appear in the coverage image.
+
+}
+
+\begin{tabular}{p{2cm}}
+\toprule
+Step 11  \\ \hline
+\end{tabular}
+ Description \\
+{\footnotesize
+Look down in the list to the two single-epoch CCD images (a coadd and a
+difference image) from visit 193110 (see the ``lsst\_visit'' column).
+~These should be the 7th and 8th in the table. ~Use the checkboxes to
+select these.\\[2\baselineskip](This visit is chosen for this test case
+because it's at a distinctive angle to the coadd
+tiles.)\\[2\baselineskip]Zoom the coverage display so that it clearly
+displays the frames of both the coadds and the single-epoch images.
+
+}
+\hdashrule[0.5ex]{\textwidth}{1pt}{3mm}
+  Expected Result \\
+{\footnotesize
+There should now be four images selected.
+
+}
+
+\begin{tabular}{p{2cm}}
+\toprule
+Step 12  \\ \hline
+\end{tabular}
+ Description \\
+{\footnotesize
+Use the ``Filter on selected rows'' control in the table header\\
+\includegraphics[width=1.69792in]{jira_imgs/3178.png}to limit the
+display to only the selected images.
+
+}
+\hdashrule[0.5ex]{\textwidth}{1pt}{3mm}
+  Expected Result \\
+{\footnotesize
+Only the four selected images should remain in the table.
+
+}
+
+\begin{tabular}{p{2cm}}
+\toprule
+Step 13  \\ \hline
+\end{tabular}
+ Description \\
+{\footnotesize
+Select the ``Data Product'' tab. ~Use the ``Show full grid'' control in
+the image toolbar\\
+\includegraphics[width=3.12500in]{jira_imgs/3179.png}to show all four
+images at once.
+
+}
+\hdashrule[0.5ex]{\textwidth}{1pt}{3mm}
+  Expected Result \\
+{\footnotesize
+The images should be displayed in a 2x2 grid.\\[2\baselineskip]One image
+will be highlighted with a yellow/orange border, following the
+highlighted row in the table.\\[2\baselineskip](Note that the image
+display itself does not clearly indicate which image is which; this is a
+known deficiency and will be addressed by future changes to the back-end
+image services and the Portal. ~In the mean time, the image metadata
+table highlight can be used to explore which is which.)
+
+}
+
+\begin{tabular}{p{2cm}}
+\toprule
+Step 14  \\ \hline
+\end{tabular}
+ Description \\
+{\footnotesize
+If the test started in a fresh session, the images will normally be
+initially displayed each in its own natural row/column
+orientation.\\[2\baselineskip]Highlight one of the coadded images in the
+table. Then select the ``Align and lock by WCS'' control in the image
+toolbar.\\
+\includegraphics[width=2.07292in]{jira_imgs/3180.png}
+
+}
+\hdashrule[0.5ex]{\textwidth}{1pt}{3mm}
+  Expected Result \\
+{\footnotesize
+All four images should now be displayed at the same orientation and
+scale. ~Note that the Visit-193110 images appear significantly rotated.
+
+}
+
+\begin{tabular}{p{2cm}}
+\toprule
+Step 15  \\ \hline
+\end{tabular}
+ Description \\
+{\footnotesize
+Zoom and pan on the images to verify that they move
+together.\\[2\baselineskip]Enjoy the comparison of the single-epoch and
+coadded image depths, and the comparison of the single-epoch image and
+the difference image. (Note: in the DP0.2 production, the ``good
+seeing'' coadd was used as the template image for the image
+differencing.)
 
 }
 \hdashrule[0.5ex]{\textwidth}{1pt}{3mm}
@@ -1774,327 +2096,6 @@ Returned to the RSP home page at
 \href{https://data.lsst.cloud/}{https://data.lsst.cloud/.} When
 navigating to the portal endpoint, expect to execute the steps in
 LVV-T849.
-
-}
-
-\paragraph{ LVV-T707 - Verify multi-image scaling and alignment }\mbox{}\\
-
-Version \textbf{1}.
-Open  \href{https://jira.lsstcorp.org/secure/Tests.jspa#/testCase/LVV-T707}{\textit{ LVV-T707 } }
-test case in Jira.
-
-Verify that the Portal has the capability to display multiple images on
-a common astrophysical coordinate scale, aligned on the screen in a
-common orientation.
-
-\textbf{ Preconditions}:\\
-
-
-Final comment:\\
-
-
-Detailed steps :
-
-\begin{tabular}{p{2cm}}
-\toprule
-Step 1  \\ \hline
-\end{tabular}
- Description \\
-{\footnotesize
-Navigate to the Portal Aspect endpoint. ~The stable version of the RSP
-at the interim data facility (IDF) should be used for this test and is
-currently located at: \url{https://data.lsst.cloud/}. The Portal Aspect
-can be reached by clicking on ``Portal'' in the RSP home page or by
-navigating directly to~\url{https://data.lsst.cloud/portal/app}.
-
-}
-\hdashrule[0.5ex]{\textwidth}{1pt}{3mm}
-  Expected Result \\
-{\footnotesize
-A credential-entry screen should be displayed.
-
-}
-
-\begin{tabular}{p{2cm}}
-\toprule
-Step 2  \\ \hline
-\end{tabular}
- Description \\
-{\footnotesize
-Enter a valid set of credentials for an LSST user with RSP access on the
-instance under test.
-
-}
-\hdashrule[0.5ex]{\textwidth}{1pt}{3mm}
-  Expected Result \\
-{\footnotesize
-The Portal Aspect UI should be displayed following authentication.
-
-}
-
-\begin{tabular}{p{2cm}}
-\toprule
-Step 3  \\ \hline
-\end{tabular}
- Description \\
-{\footnotesize
-If a calibration level (or levels) is/are specified for this test, here:
-{2, 3⁠}⁠\\
-ensure that the ``Observation Type and Source'' checkbox is selected,
-and then check off the specified calibration level(s). ~Otherwise,
-ensure that no calibration level is checked.
-
-}
-\hdashrule[0.5ex]{\textwidth}{1pt}{3mm}
-  Expected Result \\
-{\footnotesize
-
-}
-
-\begin{tabular}{p{2cm}}
-\toprule
-Step 4  \\ \hline
-\end{tabular}
- Description \\
-{\footnotesize
-Starting from the ObsTAP search screen, ensure that ``Location'' search
-is selected (using the checkbox), and that the disclosure triangle for
-its search specification is opened (i.e., pointing down).\\
-Ensure that the query type ``Observation boundary contains point'' is
-selected. Enter the target coordinates {60.361, -34.980⁠}⁠ in the
-``Coordinates or object name'' field. Type \textless{}TAB\textgreater{}
-or otherwise leave the entry field.
-
-}
-\hdashrule[0.5ex]{\textwidth}{1pt}{3mm}
-  Expected Result \\
-{\footnotesize
-The ``Coordinates of object name'' field should not show an error (i.e.,
-should not be highlighted in red).
-
-}
-
-\begin{tabular}{p{2cm}}
-\toprule
-Step 5  \\ \hline
-\end{tabular}
- Description \\
-{\footnotesize
-Use the ``Spectral Coverage'' section of the ``3. Enter Constraints''
-field on the left to restrict coverage to images covering {600
-nanometers}⁠ .\\[2\baselineskip](This selects the r-band. Symbolic
-selection of this will be available in a subsequent release of the
-Portal Aspect.)
-
-}
-\hdashrule[0.5ex]{\textwidth}{1pt}{3mm}
-  Expected Result \\
-{\footnotesize
-
-}
-
-\begin{tabular}{p{2cm}}
-\toprule
-Step 6  \\ \hline
-\end{tabular}
- Description \\
-{\footnotesize
-Execute the search. ~The usual ``tri-view'' should appear. ~Use the
-``img-tbl'' button on the upper right to change to a mode without the
-x-y plot viewer, which is not particularly useful for this test.\\
-\includegraphics[width=3.12500in]{jira_imgs/3174.png}
-
-}
-\hdashrule[0.5ex]{\textwidth}{1pt}{3mm}
-  Expected Result \\
-{\footnotesize
-The image table should appear on the right, with the image (``Data
-Product'') viewer and the coverage image in tabs on the left. ~Only
-r-band images should be shown.
-
-}
-
-\begin{tabular}{p{2cm}}
-\toprule
-Step 7  \\ \hline
-\end{tabular}
- Description \\
-{\footnotesize
-Select the coverage image tab.
-
-}
-\hdashrule[0.5ex]{\textwidth}{1pt}{3mm}
-  Expected Result \\
-{\footnotesize
-The coverage tab should display the frames of all the images returned
-from the search.
-
-}
-
-\begin{tabular}{p{2cm}}
-\toprule
-Step 8  \\ \hline
-\end{tabular}
- Description \\
-{\footnotesize
-Use the layers dialog, from the ``Manipulate overlay display'' button in
-the image toolbar:\\
-\includegraphics[width=0.37500in]{jira_imgs/3175.png}to change the
-display of image frames from ``all'' to ``selected''. (This shows only
-the frames of images that are selected using the checkbox in their table
-row.)\\
-\includegraphics[width=3.12500in]{jira_imgs/3176.png}
-
-}
-\hdashrule[0.5ex]{\textwidth}{1pt}{3mm}
-  Expected Result \\
-{\footnotesize
-
-}
-
-\begin{tabular}{p{2cm}}
-\toprule
-Step 9  \\ \hline
-\end{tabular}
- Description \\
-{\footnotesize
-Click on the header of the ``t\_min'' column to sort the data in
-increasing order of time.
-
-}
-\hdashrule[0.5ex]{\textwidth}{1pt}{3mm}
-  Expected Result \\
-{\footnotesize
-Two coadded images, one ``deep'' (dataproduct\_subtype =
-lsst.deepCoadd\_calexp) and one ``good seeing'' (lsst.goodSeeingCoadd),
-of the same sky tile, should appear at the top of the list (NB: coadded
-images do not have times assigned in the DP0.2 dataset; this will be
-changed in later data releases).
-
-}
-
-\begin{tabular}{p{2cm}}
-\toprule
-Step 10  \\ \hline
-\end{tabular}
- Description \\
-{\footnotesize
-Use the checkboxes to select the two coadded images at the top of the
-list.\\
-\includegraphics[width=3.12500in]{jira_imgs/3177.png}
-
-}
-\hdashrule[0.5ex]{\textwidth}{1pt}{3mm}
-  Expected Result \\
-{\footnotesize
-Their (identical) frames should appear in the coverage image.
-
-}
-
-\begin{tabular}{p{2cm}}
-\toprule
-Step 11  \\ \hline
-\end{tabular}
- Description \\
-{\footnotesize
-Look down in the list to the two single-epoch CCD images (a coadd and a
-difference image) from visit 193110 (see the ``lsst\_visit'' column).
-~These should be the 7th and 8th in the table. ~Use the checkboxes to
-select these.\\[2\baselineskip](This visit is chosen for this test case
-because it's at a distinctive angle to the coadd
-tiles.)\\[2\baselineskip]Zoom the coverage display so that it clearly
-displays the frames of both the coadds and the single-epoch images.
-
-}
-\hdashrule[0.5ex]{\textwidth}{1pt}{3mm}
-  Expected Result \\
-{\footnotesize
-There should now be four images selected.
-
-}
-
-\begin{tabular}{p{2cm}}
-\toprule
-Step 12  \\ \hline
-\end{tabular}
- Description \\
-{\footnotesize
-Use the ``Filter on selected rows'' control in the table header\\
-\includegraphics[width=1.69792in]{jira_imgs/3178.png}to limit the
-display to only the selected images.
-
-}
-\hdashrule[0.5ex]{\textwidth}{1pt}{3mm}
-  Expected Result \\
-{\footnotesize
-Only the four selected images should remain in the table.
-
-}
-
-\begin{tabular}{p{2cm}}
-\toprule
-Step 13  \\ \hline
-\end{tabular}
- Description \\
-{\footnotesize
-Select the ``Data Product'' tab. ~Use the ``Show full grid'' control in
-the image toolbar\\
-\includegraphics[width=3.12500in]{jira_imgs/3179.png}to show all four
-images at once.
-
-}
-\hdashrule[0.5ex]{\textwidth}{1pt}{3mm}
-  Expected Result \\
-{\footnotesize
-The images should be displayed in a 2x2 grid.\\[2\baselineskip]One image
-will be highlighted with a yellow/orange border, following the
-highlighted row in the table.\\[2\baselineskip](Note that the image
-display itself does not clearly indicate which image is which; this is a
-known deficiency and will be addressed by future changes to the back-end
-image services and the Portal. ~In the mean time, the image metadata
-table highlight can be used to explore which is which.)
-
-}
-
-\begin{tabular}{p{2cm}}
-\toprule
-Step 14  \\ \hline
-\end{tabular}
- Description \\
-{\footnotesize
-If the test started in a fresh session, the images will normally be
-initially displayed each in its own natural row/column
-orientation.\\[2\baselineskip]Highlight one of the coadded images in the
-table. Then select the ``Align and lock by WCS'' control in the image
-toolbar.\\
-\includegraphics[width=2.07292in]{jira_imgs/3180.png}
-
-}
-\hdashrule[0.5ex]{\textwidth}{1pt}{3mm}
-  Expected Result \\
-{\footnotesize
-All four images should now be displayed at the same orientation and
-scale. ~Note that the Visit-193110 images appear significantly rotated.
-
-}
-
-\begin{tabular}{p{2cm}}
-\toprule
-Step 15  \\ \hline
-\end{tabular}
- Description \\
-{\footnotesize
-Zoom and pan on the images to verify that they move
-together.\\[2\baselineskip]Enjoy the comparison of the single-epoch and
-coadded image depths, and the comparison of the single-epoch image and
-the difference image. (Note: in the DP0.2 production, the ``good
-seeing'' coadd was used as the template image for the image
-differencing.)
-
-}
-\hdashrule[0.5ex]{\textwidth}{1pt}{3mm}
-  Expected Result \\
-{\footnotesize
 
 }
 
