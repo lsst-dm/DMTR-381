@@ -1,6 +1,6 @@
 % generated from JIRA project LVV
 % using template at /usr/share/miniconda/envs/docsteady-env/lib/python3.7/site-packages/docsteady/templates/tpnoresult.latex.jinja2.
-% using docsteady version 2.2.9
+% using docsteady version 2.3.0
 % Please do not edit -- update information in Jira instead
 \documentclass[DM,lsstdraft,STR,toc]{lsstdoc}
 \usepackage{geometry}
@@ -31,7 +31,7 @@
 
 \title{LDM-503-RSPa: RSP on the Interim Data Facility (IDF) is ready for DP0.2 Test Plan }
 \setDocRef{\lsstDocType-\lsstDocNum}
-\date{ 2022-09-16 }
+\date{ 2022-09-19 }
 \author{ Gregory Dubois-Felsmann }
 
 \input{history_and_info.tex}
@@ -77,6 +77,8 @@ be performed. ~See LVV-T2678.
 \subsection{System Overview}
 \label{sect:systemoverview}
 
+ Tested on the IDF at data.lsst.cloud, in Safari 15.6.1 under macOS
+11.6.8, based on the DP0.2 dataset.
 
 
 \subsection{Document Overview}
@@ -199,7 +201,7 @@ Gregory Dubois-Felsmann }
 \multicolumn{2}{r}{ T. Plan \href{https://jira.lsstcorp.org/secure/Tests.jspa\#/testPlan/LVV-P80}{LVV-P80}:} &
 \multicolumn{2}{p{10.9cm}}{\textbf{ LDM-503-RSPa: RSP on the Interim Data Facility (IDF) is ready for DP0.2 }} & Approved \\\hline
 \multicolumn{2}{r}{ T. Cycle \href{https://jira.lsstcorp.org/secure/Tests.jspa\#/testCycle/LVV-C167}{LVV-C167}:} &
-\multicolumn{2}{p{10.9cm}}{\textbf{ LDM-503-RSPa: Test RSP capabilities on IDF for DP0.2 readiness }} & Not Executed \\\hline
+\multicolumn{2}{p{10.9cm}}{\textbf{ LDM-503-RSPa: Test RSP capabilities on IDF for DP0.2 readiness }} & In Progress \\\hline
 \textbf{Test Cases} &  \textbf{Ver.}  \\\toprule
 \href{https://jira.lsstcorp.org/secure/Tests.jspa#/testCase/LVV-T2677}{LVV-T2677}
 &  1
@@ -236,7 +238,7 @@ Not yet available.
 Open test cycle {\it \href{https://jira.lsstcorp.org/secure/Tests.jspa#/testrun/LVV-C167}{LDM-503-RSPa: Test RSP capabilities on IDF for DP0.2 readiness}} in Jira.
 
 Test Cycle name: LDM-503-RSPa: Test RSP capabilities on IDF for DP0.2 readiness\\
-Status: Not Executed
+Status: In Progress
 
 This test cycle contains the tests necessary to verify the readiness of
 the RSP as redeployed on the IDF to meet the needs of the DP0.2
@@ -267,7 +269,13 @@ for DP0.2 are present, based on single-epoch images.
 \textbf{ Preconditions}:\\
 
 
-Final comment:\\
+Final comment:\\It was possible to carry out all the required test steps, almost all
+fully successfully. ~A few steps had ``pass with deviation'' status.
+~Tickets have been filed for all of these. ~Regarding Firefly, 4 are
+bugs, 1 is a planned feature that has not yet been implemented, and 5
+are suggested improvements, mainly to UX. ~An additional ticket about
+warnings in FITS file verification has been filed for Science Pipelines,
+and seems to be a known issue.
 
 
 Detailed steps :
