@@ -288,10 +288,42 @@ for DP0.2 are present, based on single-epoch images.
 
 
 Final comment:\\It was possible to carry out all the required test steps, almost all
-fully successfully. ~A few steps had ``pass with deviation'' status.
-~Tickets have been filed for all of these. ~Regarding Firefly, 4 are
-bugs, 1 is a planned feature that has not yet been implemented, and 5
-are suggested improvements, mainly to UX. ~An additional ticket about
+fully successfully. ~\\[2\baselineskip]Three steps were given ``Initial
+Pass'' status because of:
+
+\begin{itemize}
+\tightlist
+\item
+  the slowness of initial loading of masks, without an in-progress
+  indication,~
+\item
+  the lack of a grid view for the extensions in raw images, and
+\item
+  poor choices in the drawing of the coordinate grids overlaid on
+  images.
+\end{itemize}
+
+These are not obstacles to verification; the system is usable
+as-is.\\[2\baselineskip]Three steps were given ``pass with deviation''
+status:
+
+\begin{itemize}
+\tightlist
+\item
+  A FITS-verification bug. ~This does not appear to be fatal and should
+  not block verification.
+\item
+  Distance measurement in pixels is missing. ~This appears to be a
+  regression, should be fixed, and does block verification of
+  DMS-PRTL-REQ-0085.
+\item
+  Median calculation missing from image statistics. ~This was judged
+  sufficient to block verification of DMS-PRTL-REQ-0097.
+\end{itemize}
+
+Tickets have been filed for all of these issues. Regarding Firefly, 4
+are bugs, 1 is a planned feature that has not yet been implemented, and
+5 are suggested improvements, mainly to UX. ~An additional ticket about
 warnings in FITS file verification has been filed for Science Pipelines,
 and seems to be a known issue.
 
@@ -1160,7 +1192,11 @@ for DP0.2 are present, as pertaining to coadded images
 \textbf{ Preconditions}:\\
 
 
-Final comment:\\
+Final comment:\\Display of coadded images was shown to be equally well supported as for
+single-epoch images, in general.\\[2\baselineskip]Recommend improvements
+to the Portal's ability to help users select coadded image types; this
+is currently awkward and unintuitive. ~``Initial Pass'' status is due to
+this deficiency.
 
 
 Detailed steps :
@@ -1789,7 +1825,8 @@ imaging, within the context of DP0.2.
 \textbf{ Preconditions}:\\
 
 
-Final comment:\\
+Final comment:\\Full pass for the requirements covered.\\[2\baselineskip]Ticket created
+for improvement to the labeling of the Portal coordinate display grid.
 
 
 Detailed steps :
