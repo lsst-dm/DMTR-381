@@ -224,25 +224,27 @@ Gregory Dubois-Felsmann }
 \subsection{Overall Assessment}
 \label{sect:overallassessment}
 
-Generally successfully. ~No test steps failed.\\[2\baselineskip]Lack of
+Generally successful. ~No test steps failed.\\[2\baselineskip]Lack of
 support for easy symbolic selection of filter bands was noted, but band
 selection was still possible, either by wavelength, or by symbolic
 selection via the ``constraints field''. This is expected to be remedied
 during the remaining life of DP0.2.\\[2\baselineskip]Lack of pixel-based
 distance measurements on images prevented the expected verification of
 DMS-PRTL-REQ-0085. (This appears to be a recent regression, as this
-functionality was previously available.)\\[2\baselineskip]5 other bugs
-were reported against the Portal, mostly minor usability issues, with
-one affecting the format of downloaded FITS files. 7 additional tickets
-were filed for suggested improvements.\\[2\baselineskip]One ticket was
-filed against the pipelines regarding ``warning''-level verification
-problems with FITS files.\\[2\baselineskip]Outside the scope of this
-test as written: it was impossible to conveniently test the API Aspect
-image services directly because of a lack of a good recipe for supplying
-authorization tokens to the image services. ~This affects their
-usability externally as well as from the Notebook Aspect. ~This should
-be a focus of usability work on PyVO and on possible ``convenience''
-wrapper functions between now and ComCam operation.
+functionality was previously available.) ~Lack of a median calculation
+prevented the full verification of DMS-PRTL-REQ-0097.\\[2\baselineskip]5
+other bugs were reported against the Portal, mostly minor usability
+issues, with one affecting the format of downloaded FITS files. 7
+additional tickets were filed for suggested
+improvements.\\[2\baselineskip]One ticket was filed against the
+pipelines regarding ``warning''-level verification problems with FITS
+files.\\[2\baselineskip]Outside the scope of this test as written: it
+was impossible to conveniently test the API Aspect image services
+directly because of a lack of a good recipe for supplying authorization
+tokens to the image services. ~This affects their usability externally
+as well as from the Notebook Aspect. ~This should be a focus of
+usability work on PyVO and on possible ``convenience'' wrapper functions
+between now and ComCam operation.
 
 \subsection{Recommended Improvements}
 \label{sect:recommendations}
