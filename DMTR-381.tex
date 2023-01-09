@@ -31,7 +31,7 @@
 
 \title{LDM-503-RSPa: RSP on the Interim Data Facility (IDF) is ready for DP0.2 Test Plan and Report}
 \setDocRef{\lsstDocType-\lsstDocNum}
-\date{ 2022-09-20 }
+\date{ 2023-01-09 }
 \author{ Gregory Dubois-Felsmann }
 
 \input{history_and_info.tex}
@@ -787,7 +787,7 @@ Verified
 }
 \begin{tabular}{p{2cm}p{14cm}}
 \toprule
-Step 12 & Step Execution Status: \textbf{ Initial Pass } \\ \hline
+Step 12 & Step Execution Status: \textbf{ Pass } \\ \hline
 \end{tabular}
  Description \\
 {\footnotesize
@@ -822,7 +822,7 @@ ghosts, and the like.\\[2\baselineskip]Not only is the initial load
 slow, but there is no clear progress indicator, so it is easy to first
 conclude, in error, that the overlay operation has failed in some
 way.\\[2\baselineskip]Mask plane selection and color editing was
-verified.
+verified.\\[2\baselineskip]Place in MONITORING state.
 
 }
 \begin{tabular}{p{2cm}p{14cm}}
@@ -1094,7 +1094,7 @@ A 196.4 MB FITS file was returned.
 }
 \begin{tabular}{p{2cm}p{14cm}}
 \toprule
-Step 21 & Step Execution Status: \textbf{ Pass w/ Deviation } \\ \hline
+Step 21 & Step Execution Status: \textbf{ Initial Pass } \\ \hline
 \end{tabular}
  Description \\
 {\footnotesize
@@ -1273,7 +1273,7 @@ lock-by-click.\\[2\baselineskip]Comment:
 }
 \begin{tabular}{p{2cm}p{14cm}}
 \toprule
-Step 26 & Step Execution Status: \textbf{ Initial Pass } \\ \hline
+Step 26 & Step Execution Status: \textbf{ Pass } \\ \hline
 \end{tabular}
  Description \\
 {\footnotesize
@@ -1304,12 +1304,12 @@ surprising non-round-number values for the lines it draws (regardless of
 whether labeled in sexagesimal or decimal). ~It also sometimes fails to
 draw enough lines when zoomed in, or to adequately label them. ~(E.g.,
 in the attached display only one line of RA is labeled.) ~Passes, but
-needs improvement.
+needs improvement: leave in MONITORING state.
 
 }
 \begin{tabular}{p{2cm}p{14cm}}
 \toprule
-Step 27 & Step Execution Status: \textbf{ Pass w/ Deviation } \\ \hline
+Step 27 & Step Execution Status: \textbf{ Initial Pass } \\ \hline
 \end{tabular}
  Description \\
 {\footnotesize
@@ -1343,7 +1343,7 @@ in pixel space, which seems to be a regression from previous experience.
 }
 \begin{tabular}{p{2cm}p{14cm}}
 \toprule
-Step 28 & Step Execution Status: \textbf{ Pass w/ Deviation } \\ \hline
+Step 28 & Step Execution Status: \textbf{ Initial Pass } \\ \hline
 \end{tabular}
  Description \\
 {\footnotesize
@@ -2001,7 +2001,7 @@ improvement.
 }
 \begin{tabular}{p{2cm}p{14cm}}
 \toprule
-Step 9 & Step Execution Status: \textbf{ Initial Pass } \\ \hline
+Step 9 & Step Execution Status: \textbf{ Pass } \\ \hline
 \end{tabular}
  Description \\
 {\footnotesize
@@ -2020,8 +2020,7 @@ noted above, this is a workaround and is not the intended final UX.
 \hdashrule[0.5ex]{\textwidth}{1pt}{3mm}
   Actual Result \\
 {\footnotesize
-Repeating the previous point - this is not a desirable situation, even
-though ti is possible to access the coadds as-is.
+This workaround was successful at producing a query for only coadds.
 
 }
 \begin{tabular}{p{2cm}p{14cm}}
