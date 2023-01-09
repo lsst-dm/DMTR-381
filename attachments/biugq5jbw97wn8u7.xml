@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<uws:job xmlns:uws="http://www.ivoa.net/xml/UWS/v1.0" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1">
+  <uws:jobId>biugq5jbw97wn8u7</uws:jobId>
+  <uws:runId />
+  <uws:ownerId>CN=gpdf</uws:ownerId>
+  <uws:phase>COMPLETED</uws:phase>
+  <uws:quote>2022-09-20T22:13:55.970Z</uws:quote>
+  <uws:creationTime>2022-09-19T22:13:55.970Z</uws:creationTime>
+  <uws:startTime>2022-09-19T22:13:56.015Z</uws:startTime>
+  <uws:endTime>2022-09-19T22:13:57.147Z</uws:endTime>
+  <uws:executionDuration>14400</uws:executionDuration>
+  <uws:destruction>2022-09-26T22:13:55.970Z</uws:destruction>
+  <uws:parameters>
+    <uws:parameter id="LANG">ADQL</uws:parameter>
+    <uws:parameter id="MAXREC">50000</uws:parameter>
+    <uws:parameter id="QUERY">SELECT dataproduct_type,dataproduct_subtype,calib_level,lsst_band,em_min,em_max,lsst_tract,lsst_patch     ,lsst_visit,lsst_filter,lsst_detector,t_exptime,t_min,t_max,s_ra,s_dec,s_fov,obs_id     ,obs_collection,o_ucd,facility_name,instrument_name,s_region,access_url,access_format  FROM ivoa.ObsCore  WHERE calib_level = 2 AND dataproduct_type = 'image' AND (lsst_visit =538450)</uws:parameter>
+    <uws:parameter id="request">doQuery</uws:parameter>
+  </uws:parameters>
+  <uws:results>
+    <uws:result id="diag" xlink:href="uws:executing:1" />
+    <uws:result id="diag" xlink:href="jndi:lookup:0" />
+    <uws:result id="diag" xlink:href="read:tap_schema:11" />
+    <uws:result id="diag" xlink:href="query:parse:1" />
+    <uws:result id="diag" xlink:href="jndi:connect:0" />
+    <uws:result id="diag" xlink:href="query:execute:506" />
+    <uws:result id="diag" xlink:href="query:store:613" />
+    <uws:result id="rowcount" xlink:href="final:189" />
+    <uws:result id="result" xlink:href="http://async-results.lsst.codes/result_biugq5jbw97wn8u7.xml" />
+  </uws:results>
+</uws:job>
