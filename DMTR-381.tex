@@ -31,7 +31,7 @@
 
 \title{LDM-503-RSPa: RSP on the Interim Data Facility (IDF) is ready for DP0.2 Test Plan and Report}
 \setDocRef{\lsstDocType-\lsstDocNum}
-\date{ 2023-01-09 }
+\date{ 2023-01-18 }
 \author{ Gregory Dubois-Felsmann }
 
 \input{history_and_info.tex}
@@ -279,24 +279,8 @@ Pass'' status because of:
 \begin{itemize}
 \tightlist
 \item
-  the slowness of initial loading of masks, without an in-progress
-  indication,~
-\item
-  the lack of a grid view for the extensions in raw images, and
-\item
-  poor choices in the drawing of the coordinate grids overlaid on
-  images.
-\end{itemize}
-
-These are not obstacles to verification; the system is usable
-as-is.\\[2\baselineskip]Three steps were given ``pass with deviation''
-status:
-
-\begin{itemize}
-\tightlist
-\item
-  A FITS-verification bug. ~This does not appear to be fatal and should
-  not block verification.
+  A FITS-verification bug. ~This does not appear to be fatal and is not
+  a blocker, but should be fixed.
 \item
   Distance measurement in pixels is missing. ~This appears to be a
   regression, should be fixed, and does block verification of
@@ -304,6 +288,23 @@ status:
 \item
   Median calculation missing from image statistics. ~This was judged
   sufficient to block verification of DMS-PRTL-REQ-0097.
+\end{itemize}
+
+These are not obstacles to commissioning or Data Preview work; the
+system is usable as-is. However, these issues should be addressed with
+priority.\\[2\baselineskip]A few notable points also resulted in tickets
+but were rated ``Pass'':
+
+\begin{itemize}
+\tightlist
+\item
+  The slowness of initial loading of masks, without an in-progress
+  indication;
+\item
+  Poor choices in the drawing of the coordinate grids overlaid on
+  images;
+\item
+  The lack of a grid view for the extensions in raw images.
 \end{itemize}
 
 Tickets have been filed for all of these issues. Regarding Firefly, 4
@@ -436,24 +437,8 @@ Pass'' status because of:
 \begin{itemize}
 \tightlist
 \item
-  the slowness of initial loading of masks, without an in-progress
-  indication,~
-\item
-  the lack of a grid view for the extensions in raw images, and
-\item
-  poor choices in the drawing of the coordinate grids overlaid on
-  images.
-\end{itemize}
-
-These are not obstacles to verification; the system is usable
-as-is.\\[2\baselineskip]Three steps were given ``pass with deviation''
-status:
-
-\begin{itemize}
-\tightlist
-\item
-  A FITS-verification bug. ~This does not appear to be fatal and should
-  not block verification.
+  A FITS-verification bug. ~This does not appear to be fatal and is not
+  a blocker, but should be fixed.
 \item
   Distance measurement in pixels is missing. ~This appears to be a
   regression, should be fixed, and does block verification of
@@ -461,6 +446,23 @@ status:
 \item
   Median calculation missing from image statistics. ~This was judged
   sufficient to block verification of DMS-PRTL-REQ-0097.
+\end{itemize}
+
+These are not obstacles to commissioning or Data Preview work; the
+system is usable as-is. However, these issues should be addressed with
+priority.\\[2\baselineskip]A few notable points also resulted in tickets
+but were rated ``Pass'':
+
+\begin{itemize}
+\tightlist
+\item
+  The slowness of initial loading of masks, without an in-progress
+  indication;
+\item
+  Poor choices in the drawing of the coordinate grids overlaid on
+  images;
+\item
+  The lack of a grid view for the extensions in raw images.
 \end{itemize}
 
 Tickets have been filed for all of these issues. Regarding Firefly, 4
@@ -977,7 +979,7 @@ Comments on the test plan:
 }
 \begin{tabular}{p{2cm}p{14cm}}
 \toprule
-Step 17 & Step Execution Status: \textbf{ Initial Pass } \\ \hline
+Step 17 & Step Execution Status: \textbf{ Pass } \\ \hline
 \end{tabular}
  Description \\
 {\footnotesize
@@ -1376,8 +1378,9 @@ moused-over.\\[2\baselineskip]The tool does not provide the median flux,
 which would generally be useful, and also doesn't provide the
 higher-moment statistics (skewness and kurtosis) mentioned, those those
 are arguably less interesting than the extra capabilities that are
-provided.\\[2\baselineskip]Assessing as ``pass with deviation'' because
-of the missing median, specifically.\\[2\baselineskip]Comments:
+provided.\\[2\baselineskip]Assessing as ``Initial Pass'' because of the
+missing median, specifically. This must be
+addressed.\\[2\baselineskip]Comments:
 
 \begin{enumerate}
 \tightlist
