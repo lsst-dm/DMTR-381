@@ -1,6 +1,6 @@
 % generated from JIRA project LVV
 % using template at /usr/share/miniconda/envs/docsteady-env/lib/python3.7/site-packages/docsteady/templates/tpnoresult.latex.jinja2.
-% using docsteady version 2.2.9
+% using docsteady version 2.3.0
 % Please do not edit -- update information in Jira instead
 \documentclass[DM,lsstdraft,STR,toc]{lsstdoc}
 \usepackage{geometry}
@@ -31,7 +31,7 @@
 
 \title{LDM-503-RSPa: RSP on the Interim Data Facility (IDF) is ready for DP0.2 Test Plan }
 \setDocRef{\lsstDocType-\lsstDocNum}
-\date{ 2022-09-16 }
+\date{ 2023-01-18 }
 \author{ Gregory Dubois-Felsmann }
 
 \input{history_and_info.tex}
@@ -77,6 +77,8 @@ be performed. ~See LVV-T2678.
 \subsection{System Overview}
 \label{sect:systemoverview}
 
+ Tested on the IDF at data.lsst.cloud, in Safari 15.6.1 under macOS
+11.6.8, based on the DP0.2 dataset.
 
 
 \subsection{Document Overview}
@@ -159,7 +161,7 @@ Gregory Dubois-Felsmann }
 \end{minipage}
 \\ \hline
 \href{https://jira.lsstcorp.org/secure/Tests.jspa#/testCase/LVV-T2721}{LVV-T2721}
-& {\small Gregory Dubois-Felsmann } & {\small  } &
+& {\small Gregory Dubois-Felsmann } & {\small Gregory Dubois-Felsmann } &
 \begin{minipage}[]{6cm}
 \smallskip
 {\small  }
@@ -167,7 +169,7 @@ Gregory Dubois-Felsmann }
 \end{minipage}
 \\ \hline
 \href{https://jira.lsstcorp.org/secure/Tests.jspa#/testCase/LVV-T707}{LVV-T707}
-& {\small Jeffrey Carlin } & {\small  } &
+& {\small Jeffrey Carlin } & {\small Gregory Dubois-Felsmann } &
 \begin{minipage}[]{6cm}
 \smallskip
 {\small  }
@@ -175,7 +177,7 @@ Gregory Dubois-Felsmann }
 \end{minipage}
 \\ \hline
 \href{https://jira.lsstcorp.org/secure/Tests.jspa#/testCase/LVV-T2716}{LVV-T2716}
-& {\small Gregory Dubois-Felsmann } & {\small  } &
+& {\small Gregory Dubois-Felsmann } & {\small Gregory Dubois-Felsmann } &
 \begin{minipage}[]{6cm}
 \smallskip
 {\small  }
@@ -199,7 +201,7 @@ Gregory Dubois-Felsmann }
 \multicolumn{2}{r}{ T. Plan \href{https://jira.lsstcorp.org/secure/Tests.jspa\#/testPlan/LVV-P80}{LVV-P80}:} &
 \multicolumn{2}{p{10.9cm}}{\textbf{ LDM-503-RSPa: RSP on the Interim Data Facility (IDF) is ready for DP0.2 }} & Approved \\\hline
 \multicolumn{2}{r}{ T. Cycle \href{https://jira.lsstcorp.org/secure/Tests.jspa\#/testCycle/LVV-C167}{LVV-C167}:} &
-\multicolumn{2}{p{10.9cm}}{\textbf{ LDM-503-RSPa: Test RSP capabilities on IDF for DP0.2 readiness }} & Not Executed \\\hline
+\multicolumn{2}{p{10.9cm}}{\textbf{ LDM-503-RSPa: Test RSP capabilities on IDF for DP0.2 readiness }} & Done \\\hline
 \textbf{Test Cases} &  \textbf{Ver.}  \\\toprule
 \href{https://jira.lsstcorp.org/secure/Tests.jspa#/testCase/LVV-T2677}{LVV-T2677}
 &  1
@@ -222,7 +224,25 @@ Gregory Dubois-Felsmann }
 \subsection{Overall Assessment}
 \label{sect:overallassessment}
 
-Not yet available.
+Generally successful. ~No test steps failed.\\[2\baselineskip]Lack of
+support for easy symbolic selection of filter bands was noted, but band
+selection was still possible, either by wavelength, or by symbolic
+selection via the ``constraints field''. This is expected to be remedied
+during the remaining life of DP0.2.\\[2\baselineskip]Lack of pixel-based
+distance measurements on images prevented the expected verification of
+DMS-PRTL-REQ-0085. (This appears to be a recent regression, as this
+functionality was previously available.) ~Lack of a median calculation
+prevented the full verification of DMS-PRTL-REQ-0097.\\[2\baselineskip]5
+other bugs were reported against the Portal, mostly minor usability
+issues, with one affecting the format of downloaded FITS files. 7
+additional tickets were filed for suggested
+improvements.\\[2\baselineskip]One ticket was filed against the
+pipelines regarding ``warning''-level verification problems with FITS
+files.\\[2\baselineskip]Outside the scope of this test as written: it
+was impossible to conveniently test the API Aspect image services
+directly because of a lack of a good recipe for supplying authorization
+tokens to the image services. ~This affects their usability externally
+as well as from the Notebook Aspect.
 
 \subsection{Recommended Improvements}
 \label{sect:recommendations}
@@ -236,7 +256,7 @@ Not yet available.
 Open test cycle {\it \href{https://jira.lsstcorp.org/secure/Tests.jspa#/testrun/LVV-C167}{LDM-503-RSPa: Test RSP capabilities on IDF for DP0.2 readiness}} in Jira.
 
 Test Cycle name: LDM-503-RSPa: Test RSP capabilities on IDF for DP0.2 readiness\\
-Status: Not Executed
+Status: Done
 
 This test cycle contains the tests necessary to verify the readiness of
 the RSP as redeployed on the IDF to meet the needs of the DP0.2
@@ -267,7 +287,46 @@ for DP0.2 are present, based on single-epoch images.
 \textbf{ Preconditions}:\\
 
 
-Final comment:\\
+Final comment:\\It was possible to carry out all the required test steps, almost all
+fully successfully. ~\\[2\baselineskip]Three steps were given ``Initial
+Pass'' status because of:
+
+\begin{itemize}
+\tightlist
+\item
+  A FITS-verification bug. ~This does not appear to be fatal and is not
+  a blocker, but should be fixed.
+\item
+  Distance measurement in pixels is missing. ~This appears to be a
+  regression, should be fixed, and does block verification of
+  DMS-PRTL-REQ-0085.
+\item
+  Median calculation missing from image statistics. ~This was judged
+  sufficient to block verification of DMS-PRTL-REQ-0097.
+\end{itemize}
+
+These are not obstacles to commissioning or Data Preview work; the
+system is usable as-is. However, these issues should be addressed with
+priority.\\[2\baselineskip]A few notable points also resulted in tickets
+but were rated ``Pass'':
+
+\begin{itemize}
+\tightlist
+\item
+  The slowness of initial loading of masks, without an in-progress
+  indication;
+\item
+  Poor choices in the drawing of the coordinate grids overlaid on
+  images;
+\item
+  The lack of a grid view for the extensions in raw images.
+\end{itemize}
+
+Tickets have been filed for all of these issues. Regarding Firefly, 4
+are bugs, 1 is a planned feature that has not yet been implemented, and
+5 are suggested improvements, mainly to UX. ~An additional ticket about
+warnings in FITS file verification has been filed for Science Pipelines,
+and seems to be a known issue.
 
 
 Detailed steps :
@@ -1134,7 +1193,11 @@ for DP0.2 are present, as pertaining to coadded images
 \textbf{ Preconditions}:\\
 
 
-Final comment:\\
+Final comment:\\Display of coadded images was shown to be equally well supported as for
+single-epoch images, in general.\\[2\baselineskip]Recommend improvements
+to the Portal's ability to help users select coadded image types; this
+is currently awkward and unintuitive. ~``Initial Pass'' status is due to
+this deficiency.
 
 
 Detailed steps :
@@ -1443,7 +1506,7 @@ common orientation.
 \textbf{ Preconditions}:\\
 
 
-Final comment:\\
+Final comment:\\Full pass for DMS-PRTL-REQ-0073.
 
 
 Detailed steps :
@@ -1763,7 +1826,8 @@ imaging, within the context of DP0.2.
 \textbf{ Preconditions}:\\
 
 
-Final comment:\\
+Final comment:\\Full pass for the requirements covered.\\[2\baselineskip]Ticket created
+for improvement to the labeling of the Portal coordinate display grid.
 
 
 Detailed steps :
